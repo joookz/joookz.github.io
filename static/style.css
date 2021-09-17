@@ -3,16 +3,25 @@
     white-space: pre-line;
 }
 
+body {
+    background-color: #F0B67F;
+}
+
 a {
-    color: black;
+    /* color: black; */
     text-decoration: none;
 }
 
 .joke {
     margin: auto;
+    margin-bottom: 40px;
     width: 100%;
     padding: 10px;
     text-align: center;
+    background-color: #FE5F55;
+    border: solid 4px;
+    color: #EEF5DB;
+    border-radius: 5px;
 }
 
 .scroller {
@@ -23,6 +32,13 @@ a {
 
 * {
     font-family: 'Inconsolata', monospace;
+    color: #EEF5DB;
+}
+
+button {
+    background-color: #153243;
+    padding: 10px;
+    font-size: 30px;
 }
 
 ul {
@@ -30,7 +46,7 @@ ul {
     margin: -8px;
     padding: 0;
     overflow: hidden;
-    background-color: #111;
+    background-color: #153243;
 }
 
 li {
@@ -46,6 +62,8 @@ li.right {
     height: 30vw;
     text-align: left;
     padding: 10px;
+    font-size: 20px;
+    background-color: #FE5F55;
 }
 
 .editable:focus {
@@ -54,7 +72,7 @@ li.right {
 
 li a {
     display: block;
-    color: white;
+    /* color: #FE5F55; */
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
