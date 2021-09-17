@@ -10,6 +10,10 @@ if ('serviceWorker' in navigator) {
     });
 }
 
+if(!location.href.split(location.hostname)[1].includes("#")){
+    location = "/#/"
+}
+
 function escapeChars(text) {
     return text
         .replace(/&/g, '&amp;')
