@@ -3,6 +3,11 @@
     white-space: pre-line;
 }
 
+a {
+    color: black;
+    text-decoration: none;
+}
+
 .joke {
     margin: auto;
     width: 100%;
@@ -30,6 +35,21 @@ ul {
 
 li {
     float: left;
+}
+
+li.right {
+    float: right;
+}
+
+.editable {
+    border: rgb(182, 182, 182) solid;
+    height: 30vw;
+    text-align: left;
+    padding: 10px;
+}
+
+.editable:focus {
+	outline: none;
 }
 
 li a {
