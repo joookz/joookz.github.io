@@ -20,8 +20,8 @@ let template = `<!DOCTYPE html>
 
 <body>
     <ul>
-        <li><a class="active" href="#/"><i class="far fa-laugh-squint"></i></a></li>
-        <li><a href="#/about">About</a></li>
+        <li><a class="active" href="/"><i class="far fa-laugh-squint"></i></a></li>
+        <li><a href="/about.html">About</a></li>
     </ul>
     <div class="scroller">
         <div class="joke">
