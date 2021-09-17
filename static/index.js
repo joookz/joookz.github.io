@@ -10,9 +10,9 @@ if ('serviceWorker' in navigator) {
     });
 }
 
-if(!location.href.split(location.hostname)[1].includes("j")){
-    location = "/j/"
-}
+// if(!location.href.split(location.hostname)[1].includes("j")){
+    // location = "/j/"
+// }
 
 function escapeChars(text) {
     return text
