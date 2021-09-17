@@ -16,6 +16,10 @@
     padding: 10px;
 }
 
+* {
+    font-family: 'Inconsolata', monospace;
+}
+
 ul {
     list-style-type: none;
     margin: -8px;
@@ -34,7 +38,7 @@ li a {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    transition-duration: 0.4s;
+    transition-duration: 0.3s;
 }
 
 li a:hover {
