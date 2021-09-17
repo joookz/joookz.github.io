@@ -4,7 +4,7 @@ self.addEventListener('install', function (event) {
 
 self.addEventListener('fetch', function (event) {
     const url = new URL(event.request.url);
-    if (location.href.split(location.hostname)[1].includes("j") && location.href.split(location.hostname)[1].split("j/")[1] != undefined) {
+    if (url.href.split(url.hostname)[1].includes("j") && url.href.split(url.hostname)[1].split("j/")[1] != undefined) {
         event.respondWith(
             fetch("https://jokzbackend.locknessko.repl.co/api/v1/get?id=" + url.href.split(url.hostname)[1].split("j/")[1]).then(x => {
                 return x.text()
