@@ -23,7 +23,16 @@ let template = `<!DOCTYPE html>
         <li><a class="active" href="#/"><i class="far fa-laugh-squint"></i></a></li>
         <li><a href="#/about">About</a></li>
     </ul>
-    &joke;
+    <div class="scroller">
+        <div class="joke">
+            <div class="content">
+                &joke;
+            </div>
+            <div class="share">
+                <i class="far fa-laugh-squint"> &laughs;</i>
+            </div>
+        </div>
+    </div>
     <script src="/static/joke.js"></script>
 </body>
 
