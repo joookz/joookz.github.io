@@ -43,13 +43,12 @@ self.addEventListener('install', function (event) {
     console.log("Installed Service Worker!")
 });
 
-function escapeChars(text) {
-    return text
-        .replace(/&/g, '&amp;')
-        .replace(/</g, '&lt;')
-        .replace(/>/g, '&gt;')
-        .replace(/"/g, '&quot;');
-}
+String.prototype.toHtmlEntities = function() {
+    return this.replace(/./gm, function(s) {
+        // return "&#" + s.charCodeAt(0) + ";";
+        return (s.match(/[a-z0-9\s]+/i)) ? s : "&#" + s.charCodeAt(0) + ";";
+    });
+};
 
 self.addEventListener('fetch', function (event) {
     const url = new URL(event.request.url);
@@ -59,7 +58,7 @@ self.addEventListener('fetch', function (event) {
                 return x.text()
             }).then(y => {
                 console.error(y);
-                return new Response(template.replace("&joke;",escapeChars(atob(y))).replace("&title;",url.href.split(url.hostname)[1].split("j/")[1]), {
+                return new Response(template.replace("&joke;",atob(y).toHtmlEntities()).replace("&title;",url.href.split(url.hostname)[1].split("j/")[1]), {
                     headers: {
                         'Content-Type': 'text/html'
                     }
